@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>playground</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <style>
+    *{
+      margin:0;
+    }
+    th, td{
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+    <table class="table-bordered">
+      <thead>
+        <th>User #</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Full Name</th>
+        <th>Full Name in upper case</th>
+        <th>Length of full name</th>
+      </thead>
+      <tbody>
+        {% for i in range(0,(users.__len__())): %}
+          <tr>
+            <td>{{i+1}}</td>
+            <td>{{users[i]['first_name']}}</td>
+            <td>{{users[i]['last_name']}}</td>
+            <td>{{(users[i]['first_name']+' '+users[i]['last_name'])}}</td>
+            <td>{{(users[i]['first_name']+' '+users[i]['last_name']).upper()}}</td>
+            <td>{{((users[i]['first_name']+users[i]['last_name']).__len__())}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</body>
+</html>
