@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Post Method</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Index Page</h1>
+  <h3>Create a User</h3>
+  <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+  <form action='/users' method='post'>
+      Name: <input type='text' name='name'>
+      Email: <input type='text' name='email'>
+      <input type='submit' value='create user'>
+  </form>
+</body>
+</html>
