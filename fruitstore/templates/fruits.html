@@ -24,13 +24,13 @@
         <section class="jumbotron text-center">
           <div class="container">
             <h1 class="jumbotron-heading">Dojo Fruits</h1>
-              <img src="{{ url_for('static', filename='apple.png') }}">
-              <img src="{{ url_for('static', filename='strawberry.png') }}">
-              <img src="{{ url_for('static', filename='raspberry.png') }}">
-              <img src="{{ url_for('static', filename='blackberry.png') }}">
-              <a href="/" class="btn btn-primary my-2">Go back</a>
-            </p>
+              <img src="{{url_for('static', filename='img/')}}apple.png" width="100px" height="100px">
+              <img src="{{url_for('static', filename='img/')}}strawberry.png" width="100px" height="100px">
+              <img src="{{url_for('static', filename='img/')}}raspberry.png" width="100px" height="100px">
+              <img src="{{url_for('static', filename='img/')}}blackberry.png" width="100px" height="100px">
           </div>
+          <a href="/" class="btn btn-primary my-2">Go back</a>
+
         </section>
   
       </main>
