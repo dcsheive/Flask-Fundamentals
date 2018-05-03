@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Counter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+  <h1>Counter</h1>
+  <h3>{% if count == 1: %}
+        {{count}} time 
+      {% else: %}
+        {{count}} times
+      {%endif%}</h3>
+  <div>
+    <form action='/add' method='post'>
+      <input type='submit' name="plus2" value="Add 2" class="btn-lg">
+    </form>
+    <form action='/destroy' method="post">
+      <input type='submit' name="reset" value="Reset" class="btn-lg">
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+*{
+    margin:0 auto;
+    padding: 0;
+}
+h1, h3 {
+    text-align: center;
+}
+form {
+    display: inline-block;
+}
+div {
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+}

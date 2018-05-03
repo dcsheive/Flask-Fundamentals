@@ -19,7 +19,6 @@ def alert():
     return redirect('/')
 @app.route('/random/<x>')
 def random(x):
-    from random import shuffle
     y = []
     for i in range(0,int(x)):
         y.append(str(i+1))

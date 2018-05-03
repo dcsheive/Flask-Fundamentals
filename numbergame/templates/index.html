@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Number Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+  <h1>Welcome to the Great Number Game</h1>
+  <h3>I am thinking of a number between 1 and 100</h3>
+  <h3>Take a guess!</h3>
+  <div class="resultBox" style="background-color: {{boxClass}}">
+      {% if wrong == 'low': %}
+        <h2>Too Low!</h2>
+      {% elif wrong == 'high': %}
+        <h2>Too High!</h2>
+      {% elif wrong == 'no': %}
+        <h2>That's not a Number!</h2>
+      {% elif wrong == 'right': %}
+        <h2>{{session['number']}} was the number!</h2>
+        <form action="/again" method="post">
+          <input type='submit' name="play" value="Play again?" class="btn-lg">
+        </form>
+      {% else: %}
+        <h2>Enter a number below!</h2>
+      {%endif%}
+  </div>
+  <div>
+    <form action='/guess' method='post'>
+      <input type="text" name="guessNum">
+      <input type='submit' name="plus2" class="btn-lg">
+    </form>
+  </div>
+</body>
+</html>
