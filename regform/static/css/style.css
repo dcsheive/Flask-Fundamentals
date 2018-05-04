@@ -2,6 +2,9 @@
     margin:0 ;
     padding: 0;
 }
+p {
+    color: red;
+}
 body {
 
     display: flex;
