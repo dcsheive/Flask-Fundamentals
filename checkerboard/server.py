@@ -7,4 +7,4 @@ def welcome():
 def play2(rows, cols):
     return render_template("index.html", rows = int(rows), cols = int(cols))
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True) 
